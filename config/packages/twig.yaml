@@ -1,9 +1,9 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
 
-globals:
-    glicences: '@App\Globals\Licences'
-    geditors: '@App\Globals\Editors'
+    globals:
+        glicences: '@App\Globals\Licences'
+        geditors: '@App\Globals\Editors'
 
 when@test:
     twig:
