@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	{# <h1>{{ front }}</h1> #}
+
+	{# {% for image in comics.media %}
+
+		<img src="{{ asset('media/' ~ image.src) }}" alt="{{ image.alt }}">
+
+	{% endfor %} #}
+	<h2>{{ comics.title }}</h2>
+	<h3>{{ comics.description }}</h3>
+    <h3>{{ comics.year }}</h3>
+
+{% endblock %}
