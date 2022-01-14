@@ -1,0 +1,19 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+
+         {{form_start(editorForm)}}
+
+                {{form_label(editorForm.name, 'Name')}}
+                {{form_widget(editorForm.name)}}
+
+                {{form_label(editorForm.country, 'Country')}}
+                {{form_widget(editorForm.country)}}
+
+
+                {{form_widget(editorForm.submit)}}
+
+	{{form_end(editorForm)}}
+
+{% endblock %}

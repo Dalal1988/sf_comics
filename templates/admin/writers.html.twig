@@ -1,0 +1,13 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+
+		{% for writer in writers %}
+			
+			<h2>{{ writer.name }}</h2>
+			<h3>{{ writer.country }}</h3>
+
+		{% endfor %}
+
+{% endblock %}

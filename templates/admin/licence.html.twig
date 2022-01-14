@@ -1,0 +1,10 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+
+		<h2>
+			<a href="{{ path('admin_licence_show', {'id' : licence.id }) }}">{{ licence.name }}</a>
+		</h2>
+
+{% endblock %}

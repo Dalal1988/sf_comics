@@ -1,0 +1,18 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+	 {{form_start(designerForm)}}
+
+                {{form_label(designerForm.name, 'Name')}}
+                {{form_widget(designerForm.name)}}
+
+                {{form_label(designerForm.country, 'Country')}}
+                {{form_widget(designerForm.country)}}
+
+
+                {{form_widget(designerForm.Submit)}}
+
+	{{form_end(designerForm)}}
+
+{% endblock %}

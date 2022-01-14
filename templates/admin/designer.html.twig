@@ -1,0 +1,10 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+
+		<h2>
+			<a href="{{ path('admin_comics_show', {'id' : designer.id }) }}">{{ designer.name }}</a>
+		</h2>
+
+{% endblock %}

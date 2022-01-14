@@ -1,0 +1,14 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+
+		{% for comic in comics %}
+			
+			<h2>{{ comic.title }}</h2>
+			<h3>{{ comic.description }}</h3>
+			<h3>{{ comic.year | date('d-m-Y') }}</h3>
+
+		{% endfor %}
+
+{% endblock %}
