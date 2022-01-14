@@ -20,12 +20,12 @@ class ComicsController extends AbstractController
     }
 
     /**
-     * @Route("comics/{id}", name="comics_show")
+     * @Route("comic/{id}", name="comics_show")
      */
     public function comicsShow($id, ComicsRepository $comicsRepository)
     {
         $comics = $comicsRepository->find($id);
 
-        return $this->render("front/comics.html.twig", ['comics' => $comics]);
+        return $this->render("front/comic.html.twig", ['comics' => $comics]);
     }
 }

@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+		<h2>
+			<a href="{{ path('comics_show', {'id' : comics.id }) }}">{{ comics.title }}</a>
+		</h2>
+
+{% endblock %}

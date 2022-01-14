@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+		{% for designer in designers %}
+			
+			<h2>{{ designer.name }}</h2>
+			<h3>{{ designer.country }}</h3>
+
+		{% endfor %}
+
+{% endblock %}

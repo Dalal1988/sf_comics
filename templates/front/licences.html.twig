@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+		{% for licence in licences %}
+			
+			<h2>{{ licence.name }}</h2>
+			<h3>{{ licence.description }}</h3>
+
+		{% endfor %}
+
+{% endblock %}

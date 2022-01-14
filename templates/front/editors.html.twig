@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+		{% for editor in editors %}
+			
+			<h2>{{ editor.name }}</h2>
+			<h3>{{ editor.country }}</h3>
+
+		{% endfor %}
+
+{% endblock %}
