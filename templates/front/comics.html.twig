@@ -2,13 +2,27 @@
 
 {% block body %}
 
+	{% for comic in comics %}
+	<div class="container">
+		<div class="row row-cols-3">
+			<div class="card shadow-sm text-white bg-dark mb-3">
+				<div class="card-body">
+					<h5 class="card-title">{{ comic.title }}</h5>
+					<br>
+					<p class="card-text">{{ comic.description }}</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">edited in {{ comic.year | date('d-m-Y') }}</li>
+				</ul>
+				<div class="card-body">
+					<a href="{{path ('writers_list')}}" class="card-link">Writer</a>
+					<a href="{{path ('designer_list')}}" class="card-link">Dsigner</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-		{% for comic in comics %}
-			
-			<h2>{{ comic.title }}</h2>
-			<h3>{{ comic.description }}</h3>
-			<h3>{{ comic.year | date('d-m-Y') }}</h3>
 
-		{% endfor %}
+	{% endfor %}
 
 {% endblock %}
