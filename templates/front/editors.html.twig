@@ -3,11 +3,24 @@
 {% block body %}
 
 
-		{% for editor in editors %}
-			
-			<h2>{{ editor.name }}</h2>
-			<h3>{{ editor.country }}</h3>
-
-		{% endfor %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  {% for editor in editors %}
+  <tbody>
+    <tr>
+      <th scope="row">{{ editor.id }}</th>
+      <td>{{ editor.name }}</td>
+      <td>{{ editor.country }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
 
 {% endblock %}

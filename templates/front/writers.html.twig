@@ -3,11 +3,24 @@
 {% block body %}
 
 
-		{% for writer in writers %}
-			
-			<h2>{{ writer.name }}</h2>
-			<h3>{{ writer.country }}</h3>
-
-		{% endfor %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  {% for writer in writers %}
+  <tbody>
+    <tr>
+      <th scope="row">{{ writer.id }}</th>
+      <td>{{ writer.name }}</td>
+      <td>{{ writer.country }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
 
 {% endblock %}

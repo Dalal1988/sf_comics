@@ -3,7 +3,7 @@
 {% block body %}
 	<body class="text-center">
 		<main class="form-signin">
-			<form method="post">
+			<form method="post" class="d-flex align-items-center flex-column">
 				{% if error %}
 					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 				{% endif %}
@@ -41,7 +41,7 @@
 						Remember me
 					</label>
 				</div>
-				<button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+				<button class="w-45 btn btn-lg btn-primary" type="submit">Sign in</button>
 			</form>
 
 		</main>

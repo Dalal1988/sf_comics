@@ -3,11 +3,24 @@
 {% block body %}
 
 
-		{% for designer in designers %}
-			
-			<h2>{{ designer.name }}</h2>
-			<h3>{{ designer.country }}</h3>
-
-		{% endfor %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Country</th>
+    </tr>
+  </thead>
+  {% for designer in designers %}
+  <tbody>
+    <tr>
+      <th scope="row">{{ designer.id }}</th>
+      <td>{{ designer.name }}</td>
+      <td>{{ designer.country }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
 
 {% endblock %}

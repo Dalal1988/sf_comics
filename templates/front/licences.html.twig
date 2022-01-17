@@ -3,11 +3,24 @@
 {% block body %}
 
 
-		{% for licence in licences %}
-			
-			<h2>{{ licence.name }}</h2>
-			<h3>{{ licence.description }}</h3>
-
-		{% endfor %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  {% for licence in licences %}
+  <tbody>
+    <tr>
+      <th scope="row">{{ licence.id }}</th>
+      <td>{{ licence.name }}</td>
+      <td>{{ licence.description }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
 
 {% endblock %}
